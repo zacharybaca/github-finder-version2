@@ -1,4 +1,4 @@
-
+import Navbar from './components/layout/Navbar';
 import React from 'react';
 import './App.css';
 
@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Hello from React</h1>
+        <Navbar />
       </div>
     );
   }
