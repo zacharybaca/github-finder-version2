@@ -2,14 +2,12 @@ import React, { Component } from 'react'
 import UserItem from './UserItem';
 
  class Users extends Component {
-     state = {
-         users: []
-     }
+     
     render() {
         return (
             <div style={userStyle}>
-                {this.state.users.map(user => (
-                    <UserItem key = '' user={user}/>
+                {this.props.users.map(user => (
+                    <UserItem key ={user.id} user={user}/>
                 ))}
             </div>
         )
