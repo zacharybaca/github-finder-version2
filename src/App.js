@@ -7,6 +7,7 @@ import User from './components/users/User';
 import React, { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
+import GithubState from './context/github/GithubState';
 import './App.css';
 
 const App = () => {
@@ -55,6 +56,7 @@ const App = () => {
   
     
     return (
+      <GithubState>
       <Router>
       <div className="App">
         <Navbar />
@@ -81,6 +83,7 @@ const App = () => {
         </div>
       </div>
       </Router>
+      </GithubState>
     );
   
 }
